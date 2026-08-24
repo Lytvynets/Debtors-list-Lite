@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Debtors-list
+
+  Created by Vlad Lytvynets on 19.12.2024.
+  
+*/
+
+//Main screen
+"Given" = "दिया गया";
+"Taken" = "लिया गया";
+"Show only given" = "सिर्फ दिया हुआ दिखाएं";
+"Show only taken" = "सिर्फ लिया हुआ दिखाएं";
+"Show all" = "सभी दिखाएं";
+"Filter" = "फ़िल्टर";
+
+//Add new debt
+"Name" = "नाम";
+"Second name" = "उपनाम";
+"Sum" = "राशि";
+"Currency" = "मुद्रा";
+"Add debt" = "ऋण जोड़ें";
+"Save" = "सहेजें";
+
+//Settings
+"Notification" = "सूचनाएं";
+"Round the result" = "परिणाम को राउंड करें";
+"Dark theme" = "डार्क थीम";
+"Privacy policy" = "गोपनीयता नीति";
+"Other apps" = "अन्य ऐप्स";
+"Buy the premium version" = "प्रीमियम संस्करण खरीदें";
+"Watch Ads to support the project" = "परियोजना का समर्थन करने के लिए विज्ञापन देखें";
+"Settings" = "सेटिंग्स";
+
+//Paywall
+"Premium version" = "प्रीमियम संस्करण";
+"Disables all ads" = "सभी विज्ञापन बंद कर देता है!";
+"Allows you to set up notifications about debts" = "आपको ऋणों के बारे में सूचनाएं सेट करने की अनुमति देता है";
+"Premium version for" = "के लिए प्रीमियम संस्करण";
+"Continue" = "जारी रखें";
+

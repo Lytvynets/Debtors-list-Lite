@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 import LocalAuthentication
+import UIKit
 
 class MainViewModel {
     

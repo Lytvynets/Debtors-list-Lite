@@ -14,10 +14,23 @@ extension MainViewController: CommonViewDelegate {
     }
     
     
-    func showNewDebtorScreen() {
+    func presentScreen() {
         let vc = AddNewDebtViewController(state: false)
         vc.editDataDelegate = self
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    func showNewDebtorScreen() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        switch IAPManager.shared.isPremiumUser() {
+        case true:
+            presentScreen()
+        case false:
+            rewardedAdManager.showRewardedAd(viewController: self)
+            presentScreen()
+        }
     }
 }
 

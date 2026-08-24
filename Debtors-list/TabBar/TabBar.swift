@@ -22,7 +22,7 @@ class TabBarVC: UITabBarController{
     func setup(){
         viewControllers = [
             createNavController(rootVC: MainViewController(), title: "Debtors list", image: UIImage(named: "icons8-ledger-25")!),
-            createNavController(rootVC: SettingsViewController(), title: "Settings", image: UIImage(named: "icons8-settings-75")!)
+            createNavController(rootVC: SettingsViewController(), title: NSLocalizedString("Settings", comment: ""), image: UIImage(named: "icons8-settings-75")!)
         ]
     }
     

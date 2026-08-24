@@ -32,6 +32,15 @@ class CommonView: UIView {
     }()
     
     
+    lazy var accountIndicatorLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .systemGray
+        return label
+    }()
+    
+    
     private lazy var filterButton: UIButton = {
         var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -46,17 +55,33 @@ class CommonView: UIView {
         super.init(frame: frame)
         addSubview(infoView)
         addSubview(addButton)
+        addSubview(accountIndicatorLabel)
         addSubview(filterButton)
         addSubview(mainTableView)
         addSubview(blurView)
         setConstraints()
         colorSettings()
         setupBlurView()
+        checkAccount()
     }
     
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func checkAccount() {
+        if IAPManager.shared.isPremiumUser() {
+            accountIndicatorLabel.text = "Premium account"
+        } else {
+            accountIndicatorLabel.text = "Free account"
+        }
+    }
+    
+    
+    func fontSettings(){
+        accountIndicatorLabel.font = UIFont(name: "Avenir Book", size: frame.height * 0.0176)
     }
     
     
@@ -70,6 +95,12 @@ class CommonView: UIView {
             addButton.topAnchor.constraint(equalTo: infoView.bottomAnchor, constant: 5),
             addButton.heightAnchor.constraint(equalToConstant: 50),
             addButton.widthAnchor.constraint(equalToConstant: 50),
+            
+            accountIndicatorLabel.topAnchor.constraint(equalTo: infoView.bottomAnchor, constant: 3),
+            accountIndicatorLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            accountIndicatorLabel.centerYAnchor.constraint(equalTo: filterButton.centerYAnchor),
+            accountIndicatorLabel.leadingAnchor.constraint(equalTo: filterButton.trailingAnchor, constant: 16),
+            accountIndicatorLabel.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -16),
             filterButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             filterButton.topAnchor.constraint(equalTo: infoView.bottomAnchor, constant: 3),
             filterButton.heightAnchor.constraint(equalToConstant: 50),
@@ -112,24 +143,24 @@ class CommonView: UIView {
     
     @objc private func filterButtonAction() {
         
-        let alertController = UIAlertController(title: "Filter", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: NSLocalizedString("Filter", comment: ""), message: nil, preferredStyle: .actionSheet)
         
-        let showOnlyGiven = UIAlertAction(title: "Show only given", style: .default) { (_) in
+        let showOnlyGiven = UIAlertAction(title: NSLocalizedString("Show only given", comment: ""), style: .default) { (_) in
             self.mainTableView.filterTableView = .showGiven
             self.mainTableView.addData()
         }
         
-        let showOnlyTaken = UIAlertAction(title: "Show only taken", style: .default) { (_) in
+        let showOnlyTaken = UIAlertAction(title: NSLocalizedString("Show only taken", comment: ""), style: .default) { (_) in
             self.mainTableView.filterTableView = .showTaken
             self.mainTableView.addData()
         }
         
-        let showAll = UIAlertAction(title: "Show all", style: .default) { (_) in
+        let showAll = UIAlertAction(title:  NSLocalizedString("Show all", comment: ""), style: .default) { (_) in
             self.mainTableView.filterTableView = .showAll
             self.mainTableView.addData()
         }
         
-        let cancelAction = UIAlertAction(title: "Скасувати", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(showOnlyGiven)
         alertController.addAction(showOnlyTaken)
         alertController.addAction(showAll)

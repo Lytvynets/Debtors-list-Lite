@@ -14,8 +14,8 @@ class InfoView: UIView {
     
     lazy var debtLabel = LabelBuilder(fontSize: 25, startText: "0$", color: .green)
     lazy var youDebtLabel = LabelBuilder(fontSize: 25, startText: "0$", color: .red)
-    lazy var markDebtLabel = LabelBuilder(fontSize: 15, startText: "Given", color: nil)
-    lazy var markYouDebtLabel = LabelBuilder(fontSize: 15, startText: "Taken", color: nil)
+    lazy var markDebtLabel = LabelBuilder(fontSize: 15, startText: NSLocalizedString("Given", comment: ""), color: nil)
+    lazy var markYouDebtLabel = LabelBuilder(fontSize: 15, startText: NSLocalizedString("Taken", comment: ""), color: nil)
     lazy var debtStackView = StackViewBuilder(space: 3, type: .center, axisType: .vertical, fillType: .fill)
     lazy var youDebtStackView = StackViewBuilder(space: 3, type: .center, axisType: .vertical, fillType: .fill)
     

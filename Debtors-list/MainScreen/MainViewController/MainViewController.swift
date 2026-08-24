@@ -9,9 +9,11 @@ import UIKit
 import RealmSwift
 import LocalAuthentication
 import UserNotifications
+import StoreKit
 
 class MainViewController: UIViewController {
     
+    let realm = try! Realm()
     var commonView = CommonView()
     var viewModel = MainViewModel()
     var dataManager = DataManager()
@@ -19,6 +21,7 @@ class MainViewController: UIViewController {
     let notifications = Notifications()
     var networkManager = NetworkManager()
     var currency = Currency()
+    var rewardedAdManager = RewardedAdManager()
     
     //Settings state
     static var faceTouchId = false
@@ -52,9 +55,38 @@ class MainViewController: UIViewController {
         notifications.getNotification(type: "Local Notification")
         setupView()
         //loadCurrency()
+        dataManager.debtorsArray = realm.objects(Debtor.self)
+      
+        if !IAPManager.shared.isPremiumUser() {
+            rewardedAdManager.loadRewardedAd()
+        }
+        
         currency.loadCurrency {
             self.getDebtorsInfo()
         }
+        
+        
+        if UserDefaults.standard.integer(forKey: "launchCount") >= 5 {
+            requestReview()
+        }else {
+            UserDefaults.standard.setValue( UserDefaults.standard.integer(forKey: "launchCount") + 1, forKey: "launchCount")
+        }
+        
+        
+        switch IAPManager.shared.isPremiumUser() {
+        case true:
+            print("isPremiumUser")
+        case false:
+            print("is not PremiumUser")
+            NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        }
+    }
+    
+    
+    @objc func appDidBecomeActive() {
+        let vc = PremiumVersionPaywall()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     
@@ -63,7 +95,14 @@ class MainViewController: UIViewController {
         setColors.navigationControllerColorSettings(self)
         commonView.mainTableView.reloadData()
         commonView.colorSettings()
+        commonView.checkAccount()
         navigationController?.navigationBar.barStyle = UserDefaults.standard.bool(forKey: "LightTheme") ? .black : .default
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        commonView.fontSettings()
     }
     
     
@@ -87,6 +126,13 @@ class MainViewController: UIViewController {
                 self.commonView.infoView.youDebtLabel.text = yourDebt
                 self.commonView.infoView.debtLabel.text = debtor
             }
+        }
+    }
+    
+    
+    private func requestReview() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }

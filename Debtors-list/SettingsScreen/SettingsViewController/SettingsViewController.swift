@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
         view.addSubview(settingsTableView)
         view.backgroundColor = SetColors.currentColor.backgroundColor
         settingsTableView.settingsTableViewDelegate = self
-        rewardedAdManager.loadRewardedAd()
+        rewardedAdManager.loadMainAd() //loadRewardedAd()
         setColors.navigationControllerColorSettings(self)
         setConstraints()
     }

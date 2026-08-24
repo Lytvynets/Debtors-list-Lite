@@ -21,7 +21,7 @@ class AddNewDebtViewController: UIViewController, UITextFieldDelegate {
     
     
     lazy var segmentedControll: UISegmentedControl = {
-        let uiSegmentedControll = UISegmentedControl(items: ["Given", "Taken"])
+        let uiSegmentedControll = UISegmentedControl(items: [NSLocalizedString("Given", comment: ""),  NSLocalizedString("Taken", comment: "")])
         uiSegmentedControll.translatesAutoresizingMaskIntoConstraints = false
         uiSegmentedControll.addTarget(self, action: #selector(segmentedAction), for: .valueChanged)
         uiSegmentedControll.selectedSegmentIndex = 0
@@ -47,7 +47,7 @@ class AddNewDebtViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(userInfoTableView)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(addTapped))
-        navigationItem.title = "Add debt"
+        navigationItem.title = NSLocalizedString("Add debt", comment: "") //"Add debt"
         userInfoTableView.nameTextField.delegate = self
         userInfoTableView.secondNameTextField.delegate = self
         userInfoTableView.sumTextField.delegate = self

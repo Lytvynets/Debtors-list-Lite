@@ -10,8 +10,17 @@ import UIKit
 
 //MARK: - Settings TableView Delegate
 extension SettingsViewController: SettingsTableViewDelegate {
+    func buyPremiumVersion() {
+//        let vc = AppPurchaseViewController()
+//        navigationController?.pushViewController(vc, animated: true)
+        let vc = PremiumVersionPaywall()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
     func showAds() {
-        rewardedAdManager.showRewardedAd(viewController: self)
+        rewardedAdManager.showMainAd(viewController: self) // showRewardedAd(viewController: self)
     }
     
     

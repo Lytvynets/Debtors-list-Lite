@@ -6,7 +6,7 @@
 //
 //
 import UIKit
-
+import StoreKit
 
 class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource  {
     
@@ -18,10 +18,16 @@ class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
     let privacyPolicyUrl = "https://www.termsfeed.com/live/5a26bfcc-4d37-48ac-8beb-58532329e612"
     let otherAppsUrl = "https://apps.apple.com/us/developer/vladyslav-lytvynets/id1660079103"
     var sectionTitles = ["   ", "   ", "   ", "  "]
-    var sectionContent = [["Notification"],
-                          ["Touch ID/Face ID", "Round the result", "Dark theme"],
-                          ["Privacy policy", "Other apps"],
-                          ["Watch Ads to support the project"]]
+//    var sectionContent = [["Notification"],
+//                          ["Touch ID/Face ID", "Round the result", "Dark theme"],
+//                          ["Privacy policy", "Other apps", "Buy the premium version"],
+//                          ["Watch Ads to support the project",]]
+    
+    
+    var sectionContent = [[NSLocalizedString("Notification", comment: "")],
+                          ["Touch ID/Face ID", NSLocalizedString("Round the result", comment: ""), NSLocalizedString("Dark theme", comment: "")],
+                          [NSLocalizedString("Privacy policy", comment: ""), NSLocalizedString("Other apps", comment: ""), NSLocalizedString("Buy the premium version", comment: "")],
+                          [NSLocalizedString("Watch Ads to support the project", comment: ""),]]
     
     
     lazy var colorSwitch: UISwitch = {
@@ -57,6 +63,7 @@ class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         colorSwitch.isOn = UserDefaults.standard.bool(forKey: "LightTheme")
         touchIdSwitch.isOn = UserDefaults.standard.bool(forKey: "idIsOn")
         roundResultSwitch.isOn = UserDefaults.standard.bool(forKey: "Round")
+        IAPManager.shared.fetchProducts()
     }
     
     
@@ -118,10 +125,21 @@ class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                 cell.textLabel?.font = UIFont(name: "Avenir Book", size: screenSize.height * 0.02)
                 cell.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner, .layerMinXMaxYCorner]
                 let image = UIImage(systemName: "chevron.right")
+                let image2 = UIImage(systemName: "crown.fill")
                 let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(12), height:(12)))
                 accessory.image = image
                 accessory.tintColor = .gray
-                cell.accessoryView = accessory
+                
+                let premiumLogo  = UIImageView(frame:CGRect(x:0, y:0, width:(17), height:(17)))
+                premiumLogo.image = image2
+                premiumLogo.tintColor = .systemOrange
+                
+                switch IAPManager.shared.isPremiumUser() {
+                case true:
+                    cell.accessoryView = accessory
+                case false:
+                    cell.accessoryView = premiumLogo
+                }
             default:
                 print("default 1")
             }
@@ -166,6 +184,14 @@ class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
                 cell.accessoryView = accessory
             case 1:
                 cell.textLabel?.font = UIFont(name: "Avenir Book", size: screenSize.height * 0.02)
+                cell.layer.cornerRadius = 0
+                let image = UIImage(systemName: "chevron.right")
+                let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(12), height:(12)))
+                accessory.image = image
+                accessory.tintColor = .gray
+                cell.accessoryView = accessory
+            case 2:
+                cell.textLabel?.font = UIFont(name: "Avenir Book", size: screenSize.height * 0.02)
                 cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
                 let image = UIImage(systemName: "chevron.right")
                 let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(12), height:(12)))
@@ -197,20 +223,35 @@ class SettingsTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         case 0:
             switch (indexPath as NSIndexPath).row {
             case 0:
-                settingsTableViewDelegate?.showNotificationsSettings()
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
+                if IAPManager.shared.isPremiumUser() {
+                    settingsTableViewDelegate?.showNotificationsSettings()
+                }else{
+                    settingsTableViewDelegate?.buyPremiumVersion()
+                }
+               
             default:
                 print("Error in Switch")
             }
         case 2:
             switch (indexPath as NSIndexPath).row {
             case 0:
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
                 if let url = URL(string: privacyPolicyUrl) {
                     UIApplication.shared.open(url, options: [:])
                 }
             case 1:
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
                 if let url = URL(string: otherAppsUrl) {
                     UIApplication.shared.open(url, options: [:])
                 }
+            case 2:
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
+                settingsTableViewDelegate?.buyPremiumVersion()
             default: break
             }
         case 3:

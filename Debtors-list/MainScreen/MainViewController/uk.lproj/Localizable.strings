@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Debtors-list
+
+  Created by Vlad Lytvynets on 19.12.2024.
+  
+*/
+
+//Main screen
+"Given" = "Дано";
+"Taken" = "Взято";
+"Show only given" = "Показати тільки дано";
+"Show only taken" = "Показати тільки взято";
+"Show all" = "Показати всі";
+"Filter" = "Фільтр";
+
+//Add new debt
+"Name" = "Ім'я";
+"Second name" = "Прізвище";
+"Sum" = "Сума";
+"Currency" = "Валюта";
+"Add debt" = "Додати борг";
+"Save" = "Зберегти";
+
+//Settings
+"Notification" = "Сповіщення";
+"Round the result" = "Заокруглити результат";
+"Dark theme" = "Темна тема";
+"Privacy policy" = "Політика конфіденційності";
+"Other apps" = "Інші додатки";
+"Buy the premium version" = "Купити преміум версію";
+"Watch Ads to support the project" = "Дивитись рекламу щоб підтримати проект";
+"Settings" = "Налаштування";
+
+//Paywall
+"Premium version" = "Преміум версія";
+"Disables all ads" = "Відключає всю рекламу!";
+"Allows you to set up notifications about debts" = "Дозволяє налаштувати повідомлення про борги";
+"Premium version for" = "Преміум версія за";
+"Continue" = "Продовжити";

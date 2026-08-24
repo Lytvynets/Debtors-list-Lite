@@ -8,11 +8,13 @@
 import GoogleMobileAds
 
 class RewardedAdManager: NSObject, GADFullScreenContentDelegate {
+    
     var rewardedAd: GADRewardedAd?
+    var mainAd: GADRewardedAd?
 
     func loadRewardedAd() {
         let request = GADRequest()
-        GADRewardedAd.load(withAdUnitID: "ca-app-pub-4749079164629106/8705519785", request: request) { [self] ad, error in
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-4749079164629106/8277914103", request: request) { [self] ad, error in
             if let error = error {
                 print("Failed to load reward ad with error: \(error.localizedDescription)")
                 return
@@ -21,6 +23,9 @@ class RewardedAdManager: NSObject, GADFullScreenContentDelegate {
             rewardedAd?.fullScreenContentDelegate = self
         }
     }
+    
+    
+    
 
 
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
@@ -38,4 +43,49 @@ class RewardedAdManager: NSObject, GADFullScreenContentDelegate {
             print("RewardedAd wasn't ready")
         }
     }
+    
+    
+    func showRewardedAdWithCompletion(viewController: UIViewController, completion: @escaping (Bool) -> ()) {
+        if rewardedAd != nil {
+            rewardedAd!.present(fromRootViewController: viewController, userDidEarnRewardHandler: {
+                let reward = self.rewardedAd!.adReward
+                print("\(reward.amount) \(reward.type)")
+                completion(true)
+            })
+        } else {
+            print("RewardedAd wasn't ready")
+            completion(false)
+        }
+    }
+    
+    
+    
+    func loadMainAd() {
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-4749079164629106/8705519785", request: request) { [self] ad, error in
+            if let error = error {
+                print("Failed to load reward ad with error: \(error.localizedDescription)")
+                return
+            }
+            mainAd = ad
+            mainAd?.fullScreenContentDelegate = self
+        }
+    }
+    
+    
+    func showMainAd(viewController: UIViewController) {
+        if mainAd != nil {
+            mainAd!.present(fromRootViewController: viewController, userDidEarnRewardHandler: {
+                let reward = self.mainAd!.adReward
+                print("\(reward.amount) \(reward.type)")
+            })
+        } else {
+            print("RewardedAd wasn't ready")
+        }
+    }
+
+    
+  
+    
+    
 }

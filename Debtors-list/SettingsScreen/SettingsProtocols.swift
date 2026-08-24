@@ -14,4 +14,5 @@ protocol SettingsTableViewDelegate {
     func switchRoundDidChange(sender: UISwitch)
     func showNotificationsSettings()
     func showAds()
+    func buyPremiumVersion()
 }

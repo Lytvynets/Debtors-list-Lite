@@ -17,9 +17,9 @@ class AddNewDebtTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     let screenSize: CGRect = UIScreen.main.bounds
     var pickCurrencyDelegate: PickCurrencyDelegate?
     
-    lazy var nameTextField = TextFieldBuilder(textPlaceholder: "Name", fontSize: 15)
-    lazy var secondNameTextField = TextFieldBuilder(textPlaceholder: "Second name", fontSize: 15)
-    lazy var sumTextField = TextFieldBuilder(textPlaceholder: "Sum", fontSize: 15)
+    lazy var nameTextField = TextFieldBuilder(textPlaceholder: NSLocalizedString("Name", comment: ""), fontSize: 15)
+    lazy var secondNameTextField = TextFieldBuilder(textPlaceholder: NSLocalizedString("Second name", comment: ""), fontSize: 15)
+    lazy var sumTextField = TextFieldBuilder(textPlaceholder: NSLocalizedString("Sum", comment: ""), fontSize: 15)
     lazy var currencyLabel = LabelBuilder(fontSize: screenSize.height * 0.02, startText: "USD", color: nil)
     
     
@@ -116,7 +116,7 @@ class AddNewDebtTableView: UITableView, UITableViewDelegate, UITableViewDataSour
         case 3:
             switch (indexPath as NSIndexPath).row {
             case 0:
-                cell.textLabel?.text = "Currency"
+                cell.textLabel?.text = NSLocalizedString("Currency", comment: "") //"Currency"
                 cell.textLabel?.font = UIFont(name: "Avenir Book", size: screenSize.height * 0.02)
                 currencyLabelLayout(cell)
             default:
@@ -151,15 +151,15 @@ class AddNewDebtTableView: UITableView, UITableViewDelegate, UITableViewDataSour
     
     private func textFieldsSettings() {
         nameTextField.attributedPlaceholder = NSAttributedString(
-            string: "Name", attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
+            string:  NSLocalizedString("Name", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
         )
         
         secondNameTextField.attributedPlaceholder = NSAttributedString(
-            string: "Second name", attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
+            string: NSLocalizedString("Second name", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
         )
         
         sumTextField.attributedPlaceholder = NSAttributedString(
-            string: "Sum", attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
+            string: NSLocalizedString("Sum", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: SetColors.currentColor.placeholderTextColor]
         )
     }
     
