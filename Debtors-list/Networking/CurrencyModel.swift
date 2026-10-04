@@ -1,13 +1,7 @@
-//
-//  CurrencyModel.swift
-//  Debtors-list
-//
-//  Created by Vlad Lytvynets on 06.01.2023.
-//
+
 
 import Foundation
 
-// MARK: - Currencys
 struct Currencys: Codable {
     let realtimeCurrencyExchangeRate: RealtimeCurrencyExchangeRate
     
@@ -16,7 +10,6 @@ struct Currencys: Codable {
     }
 }
 
-// MARK: - RealtimeCurrencyExchangeRate
 struct RealtimeCurrencyExchangeRate: Codable {
     let the1FromCurrencyCode, the2FromCurrencyName, the3ToCurrencyCode, the4ToCurrencyName: String
     let the5ExchangeRate, the6LastRefreshed, the7TimeZone, the8BidPrice: String

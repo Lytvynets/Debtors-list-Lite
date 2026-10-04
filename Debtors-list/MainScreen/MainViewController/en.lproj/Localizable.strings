@@ -1,9 +1,170 @@
-/* 
+/*
   Localizable.strings
   Debtors-list
 
   Created by Vlad Lytvynets on 19.12.2024.
-  
+  v3: оновлено під новий інтерфейс SwiftUI (ключі — англійські фрази з коду).
 */
 
-"Given" = "Given";
+
+// Загальне
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Done" = "Done";
+"OK" = "OK";
+"Close" = "Close";
+"Continue" = "Continue";
+"Delete" = "Delete";
+"Try again" = "Try again";
+"Something went wrong" = "Something went wrong";
+"Debtors list" = "Debtors list";
+"now" = "now";
+"Today" = "Today";
+
+// Сплеш і онбординг
+"Know who owes whom" = "Know who owes whom";
+"Skip" = "Skip";
+"Get started" = "Get started";
+"Every debt in one list" = "Every debt in one list";
+"Add a debt in seconds and always know who owes you and whom you owe." = "Add a debt in seconds and always know who owes you and whom you owe.";
+"Any currency, one total" = "Any currency, one total";
+"Lend in hryvnias, borrow in euros. Totals are converted to dollars at current rates." = "Lend in hryvnias, borrow in euros. Totals are converted to dollars at current rates.";
+"Private by default" = "Private by default";
+"No sign-up. Your records stay on your device, and Face ID can lock the app." = "No sign-up. Your records stay on your device, and Face ID can lock the app.";
+"A nudge every week" = "A nudge every week";
+"Get a weekly summary of your debts so nothing slips your mind." = "Get a weekly summary of your debts so nothing slips your mind.";
+"Total" = "Total";
+"No sign-up" = "No sign-up";
+"Stored on your device" = "Stored on your device";
+"Weekly on %@ at %@" = "Weekly on %@ at %@";
+"Premium feature" = "Premium feature";
+
+// Головний екран
+"Debts" = "Debts";
+"Net balance" = "Net balance";
+"Owed to you" = "Owed to you";
+"You owe" = "You owe";
+"owes you" = "owes you";
+"you owe" = "you owe";
+"settled" = "settled";
+"All" = "All";
+"Filter" = "Filter";
+"History" = "History";
+"Search by name" = "Search by name";
+"New debt" = "New debt";
+"No debts yet" = "No debts yet";
+"Add who owes you and whom you owe. The totals will appear above." = "Add who owes you and whom you owe. The totals will appear above.";
+"Add a debt" = "Add a debt";
+"Nothing here yet" = "Nothing here yet";
+"No debts match this filter." = "No debts match this filter.";
+"Change amount" = "Change amount";
+"Delete this debt?" = "Delete this debt?";
+"%@ will be removed from the list." = "%@ will be removed from the list.";
+"Totals in US dollars. Rates updated %@." = "Totals in US dollars. Rates updated %@.";
+"Totals in US dollars at approximate rates." = "Totals in US dollars at approximate rates.";
+"Premium" = "Premium";
+"Go Premium" = "Go Premium";
+"No name" = "No name";
+
+// Додавання і редагування боргу
+"Amount" = "Amount";
+"Currency" = "Currency";
+"Direction" = "Direction";
+"I lent" = "I lent";
+"I borrowed" = "I borrowed";
+"They owe you this amount." = "They owe you this amount.";
+"You owe them this amount." = "You owe them this amount.";
+"Who" = "Who";
+"First name" = "First name";
+"Last name (optional)" = "Last name (optional)";
+"Operation" = "Operation";
+"Add" = "Add";
+"Subtract" = "Subtract";
+"New balance" = "New balance";
+"The balance will be zero or less. You can mark the debt as settled instead." = "The balance will be zero or less. You can mark the debt as settled instead.";
+"Mark as settled" = "Mark as settled";
+"Mark this debt as settled?" = "Mark this debt as settled?";
+"The debt will be removed from the list." = "The debt will be removed from the list.";
+
+// Налаштування
+"Settings" = "Settings";
+"Reminders" = "Reminders";
+"Weekly reminder" = "Weekly reminder";
+"Off" = "Off";
+"Privacy & display" = "Privacy & display";
+"Round totals" = "Round totals";
+"Appearance" = "Appearance";
+"System" = "System";
+"Light" = "Light";
+"Dark" = "Dark";
+"Support" = "Support";
+"Watch an ad to support the project" = "Watch an ad to support the project";
+"Restore purchases" = "Restore purchases";
+"Other apps" = "Other apps";
+"Privacy policy" = "Privacy policy";
+"Version %@ (%@)" = "Version %@ (%@)";
+"Premium is active" = "Premium is active";
+"Thank you for supporting Debtors list!" = "Thank you for supporting Debtors list!";
+"Get Premium" = "Get Premium";
+"No ads and weekly reminders. One-time purchase." = "No ads and weekly reminders. One-time purchase.";
+"Thank you for your support!" = "Thank you for your support!";
+"The ad isn't ready yet. Please try again in a moment." = "The ad isn't ready yet. Please try again in a moment.";
+"Premium has been restored." = "Premium has been restored.";
+"Language" = "Language";
+"Choose the app language in iPhone Settings." = "Choose the app language in iPhone Settings.";
+"Pro version" = "Pro version";
+"The advanced version of Debtors list" = "The advanced version of Debtors list";
+"Couldn't turn on the lock. Make sure a passcode is set in the iPhone settings." = "Couldn't turn on the lock. Make sure a passcode is set in the iPhone settings.";
+
+// Нагадування
+"Once a week you'll get a notification with your current totals." = "Once a week you'll get a notification with your current totals.";
+"Day" = "Day";
+"Time" = "Time";
+"Preview" = "Preview";
+"Notifications are turned off" = "Notifications are turned off";
+"Open Settings" = "Open Settings";
+"Allow notifications for Debtors list in the Settings app to get reminders." = "Allow notifications for Debtors list in the Settings app to get reminders.";
+"Your debts" = "Your debts";
+"Owed to you: %@\nYou owe: %@" = "Owed to you: %@\nYou owe: %@";
+
+// Блокування
+"Debtors list is locked" = "Debtors list is locked";
+"Your records are hidden until you unlock the app." = "Your records are hidden until you unlock the app.";
+"Unlock to see your debts" = "Unlock to see your debts";
+"Confirm it's you to turn on the lock" = "Confirm it's you to turn on the lock";
+"Lock with Face ID" = "Lock with Face ID";
+"Lock with Touch ID" = "Lock with Touch ID";
+"Lock with Optic ID" = "Lock with Optic ID";
+"Lock with passcode" = "Lock with passcode";
+"Unlock with Face ID" = "Unlock with Face ID";
+"Unlock with Touch ID" = "Unlock with Touch ID";
+"Unlock with Optic ID" = "Unlock with Optic ID";
+"Unlock" = "Unlock";
+
+// Пейвол
+"Debtors list Premium" = "Debtors list Premium";
+"One payment. No subscription. Yours forever." = "One payment. No subscription. Yours forever.";
+"No ads" = "No ads";
+"The banner and ad breaks disappear for good." = "The banner and ad breaks disappear for good.";
+"Weekly reminders" = "Weekly reminders";
+"Choose a day and time and get your totals in a notification." = "Choose a day and time and get your totals in a notification.";
+"Lifetime access" = "Lifetime access";
+"Pay once. All future Premium features are included." = "Pay once. All future Premium features are included.";
+"Support an indie developer" = "Support an indie developer";
+"Your purchase keeps the app alive and updated." = "Your purchase keeps the app alive and updated.";
+"What you get" = "What you get";
+"Free" = "Free";
+"Unlimited debts" = "Unlimited debts";
+"Totals in one currency" = "Totals in one currency";
+"Face ID lock" = "Face ID lock";
+"Included" = "Included";
+"Not included" = "Not included";
+"Unlock for %@" = "Unlock for %@";
+"One-time purchase. No subscription." = "One-time purchase. No subscription.";
+"Restore" = "Restore";
+"Terms of Use" = "Terms of Use";
+"Privacy Policy" = "Privacy Policy";
+"Premium unlocked" = "Premium unlocked";
+"Your purchase is waiting for approval. Premium will turn on automatically." = "Your purchase is waiting for approval. Premium will turn on automatically.";
+"The purchase couldn't be verified. Please try again." = "The purchase couldn't be verified. Please try again.";
+"No previous purchase was found for this Apple Account." = "No previous purchase was found for this Apple Account.";

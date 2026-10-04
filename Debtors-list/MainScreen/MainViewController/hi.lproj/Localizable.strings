@@ -1,41 +1,170 @@
-/* 
+/*
   Localizable.strings
   Debtors-list
 
   Created by Vlad Lytvynets on 19.12.2024.
-  
+  v3: оновлено під новий інтерфейс SwiftUI (ключі — англійські фрази з коду).
 */
 
-//Main screen
-"Given" = "दिया गया";
-"Taken" = "लिया गया";
-"Show only given" = "सिर्फ दिया हुआ दिखाएं";
-"Show only taken" = "सिर्फ लिया हुआ दिखाएं";
-"Show all" = "सभी दिखाएं";
-"Filter" = "फ़िल्टर";
 
-//Add new debt
-"Name" = "नाम";
-"Second name" = "उपनाम";
-"Sum" = "राशि";
-"Currency" = "मुद्रा";
-"Add debt" = "ऋण जोड़ें";
+// Загальне
+"Cancel" = "रद्द करें";
 "Save" = "सहेजें";
-
-//Settings
-"Notification" = "सूचनाएं";
-"Round the result" = "परिणाम को राउंड करें";
-"Dark theme" = "डार्क थीम";
-"Privacy policy" = "गोपनीयता नीति";
-"Other apps" = "अन्य ऐप्स";
-"Buy the premium version" = "प्रीमियम संस्करण खरीदें";
-"Watch Ads to support the project" = "परियोजना का समर्थन करने के लिए विज्ञापन देखें";
-"Settings" = "सेटिंग्स";
-
-//Paywall
-"Premium version" = "प्रीमियम संस्करण";
-"Disables all ads" = "सभी विज्ञापन बंद कर देता है!";
-"Allows you to set up notifications about debts" = "आपको ऋणों के बारे में सूचनाएं सेट करने की अनुमति देता है";
-"Premium version for" = "के लिए प्रीमियम संस्करण";
+"Done" = "हो गया";
+"OK" = "ठीक है";
+"Close" = "बंद करें";
 "Continue" = "जारी रखें";
+"Delete" = "हटाएँ";
+"Try again" = "फिर कोशिश करें";
+"Something went wrong" = "कुछ गलत हो गया";
+"Debtors list" = "Debtors list";
+"now" = "अभी";
+"Today" = "आज";
 
+// Сплеш і онбординг
+"Know who owes whom" = "जानें कि किसका किस पर उधार है";
+"Skip" = "छोड़ें";
+"Get started" = "शुरू करें";
+"Every debt in one list" = "हर ऋण एक सूची में";
+"Add a debt in seconds and always know who owes you and whom you owe." = "सेकंडों में ऋण जोड़ें और हमेशा जानें कि किससे आपको पैसे मिलने हैं और आपको किसे देने हैं।";
+"Any currency, one total" = "कोई भी मुद्रा, एक ही कुल";
+"Lend in hryvnias, borrow in euros. Totals are converted to dollars at current rates." = "रिव्निया में उधार दें, यूरो में उधार लें। कुल राशि मौजूदा दरों पर डॉलर में बदली जाती है।";
+"Private by default" = "शुरू से निजी";
+"No sign-up. Your records stay on your device, and Face ID can lock the app." = "कोई साइन-अप नहीं। आपके रिकॉर्ड आपके डिवाइस पर रहते हैं, और Face ID ऐप को लॉक कर सकता है।";
+"A nudge every week" = "हर हफ़्ते एक याद";
+"Get a weekly summary of your debts so nothing slips your mind." = "अपने ऋणों का साप्ताहिक सारांश पाएँ ताकि कुछ भी न भूलें।";
+"Total" = "कुल";
+"No sign-up" = "साइन-अप नहीं";
+"Stored on your device" = "आपके डिवाइस पर सहेजा गया";
+"Weekly on %@ at %@" = "हर हफ़्ते, %@ को %@ बजे";
+"Premium feature" = "Premium सुविधा";
+
+// Головний екран
+"Debts" = "ऋण";
+"Net balance" = "शुद्ध शेष";
+"Owed to you" = "आपको मिलना है";
+"You owe" = "आपको देना है";
+"owes you" = "आपको मिलना है";
+"you owe" = "आपको देना है";
+"settled" = "चुकता";
+"All" = "सभी";
+"Filter" = "फ़िल्टर";
+"History" = "इतिहास";
+"Search by name" = "नाम से खोजें";
+"New debt" = "नया ऋण";
+"No debts yet" = "अभी कोई ऋण नहीं";
+"Add who owes you and whom you owe. The totals will appear above." = "जोड़ें कि किससे आपको पैसे मिलने हैं और आपको किसे देने हैं। कुल राशि ऊपर दिखेगी।";
+"Add a debt" = "ऋण जोड़ें";
+"Nothing here yet" = "यहाँ अभी कुछ नहीं";
+"No debts match this filter." = "इस फ़िल्टर से कोई ऋण मेल नहीं खाता।";
+"Change amount" = "राशि बदलें";
+"Delete this debt?" = "यह ऋण हटाएँ?";
+"%@ will be removed from the list." = "%@ सूची से हटा दिया जाएगा।";
+"Totals in US dollars. Rates updated %@." = "कुल राशि अमेरिकी डॉलर में। दरें %@ अपडेट हुईं।";
+"Totals in US dollars at approximate rates." = "कुल राशि अनुमानित दरों पर अमेरिकी डॉलर में।";
+"Premium" = "Premium";
+"Go Premium" = "Premium लें";
+"No name" = "बिना नाम";
+
+// Додавання і редагування боргу
+"Amount" = "राशि";
+"Currency" = "मुद्रा";
+"Direction" = "प्रकार";
+"I lent" = "दिया गया";
+"I borrowed" = "लिया गया";
+"They owe you this amount." = "यह राशि आपको मिलनी है।";
+"You owe them this amount." = "यह राशि आपको देनी है।";
+"Who" = "कौन";
+"First name" = "पहला नाम";
+"Last name (optional)" = "उपनाम (वैकल्पिक)";
+"Operation" = "क्रिया";
+"Add" = "जोड़ें";
+"Subtract" = "घटाएँ";
+"New balance" = "नया शेष";
+"The balance will be zero or less. You can mark the debt as settled instead." = "शेष शून्य या उससे कम हो जाएगा। इसके बजाय आप ऋण को चुकता चिह्नित कर सकते हैं।";
+"Mark as settled" = "चुकता चिह्नित करें";
+"Mark this debt as settled?" = "इस ऋण को चुकता चिह्नित करें?";
+"The debt will be removed from the list." = "ऋण सूची से हटा दिया जाएगा।";
+
+// Налаштування
+"Settings" = "सेटिंग्स";
+"Reminders" = "रिमाइंडर";
+"Weekly reminder" = "साप्ताहिक रिमाइंडर";
+"Off" = "बंद";
+"Privacy & display" = "गोपनीयता और दिखावट";
+"Round totals" = "कुल राशि पूर्णांक करें";
+"Appearance" = "रूप";
+"System" = "सिस्टम";
+"Light" = "लाइट";
+"Dark" = "डार्क";
+"Support" = "सहायता";
+"Watch an ad to support the project" = "परियोजना का समर्थन करने के लिए विज्ञापन देखें";
+"Restore purchases" = "खरीदारी बहाल करें";
+"Other apps" = "अन्य ऐप्स";
+"Privacy policy" = "गोपनीयता नीति";
+"Version %@ (%@)" = "संस्करण %@ (%@)";
+"Premium is active" = "Premium सक्रिय है";
+"Thank you for supporting Debtors list!" = "Debtors list का समर्थन करने के लिए धन्यवाद!";
+"Get Premium" = "Premium पाएँ";
+"No ads and weekly reminders. One-time purchase." = "बिना विज्ञापन और साप्ताहिक रिमाइंडर। एक बार की खरीद।";
+"Thank you for your support!" = "आपके समर्थन के लिए धन्यवाद!";
+"The ad isn't ready yet. Please try again in a moment." = "विज्ञापन अभी तैयार नहीं है। कृपया थोड़ी देर में फिर कोशिश करें।";
+"Premium has been restored." = "Premium बहाल हो गया।";
+"Language" = "भाषा";
+"Choose the app language in iPhone Settings." = "ऐप की भाषा iPhone सेटिंग्स में चुनें।";
+"Pro version" = "Pro संस्करण";
+"The advanced version of Debtors list" = "Debtors list का उन्नत संस्करण";
+"Couldn't turn on the lock. Make sure a passcode is set in the iPhone settings." = "लॉक चालू नहीं हो सका। पक्का करें कि iPhone सेटिंग्स में पासकोड सेट है।";
+
+// Нагадування
+"Once a week you'll get a notification with your current totals." = "हफ़्ते में एक बार आपको मौजूदा कुल राशि के साथ सूचना मिलेगी।";
+"Day" = "दिन";
+"Time" = "समय";
+"Preview" = "पूर्वावलोकन";
+"Notifications are turned off" = "सूचनाएँ बंद हैं";
+"Open Settings" = "सेटिंग्स खोलें";
+"Allow notifications for Debtors list in the Settings app to get reminders." = "रिमाइंडर पाने के लिए सेटिंग्स ऐप में Debtors list के लिए सूचनाएँ चालू करें।";
+"Your debts" = "आपके ऋण";
+"Owed to you: %@\nYou owe: %@" = "आपको मिलना है: %@\nआपको देना है: %@";
+
+// Блокування
+"Debtors list is locked" = "Debtors list लॉक है";
+"Your records are hidden until you unlock the app." = "ऐप अनलॉक करने तक आपके रिकॉर्ड छिपे रहेंगे।";
+"Unlock to see your debts" = "अपने ऋण देखने के लिए अनलॉक करें";
+"Confirm it's you to turn on the lock" = "लॉक चालू करने के लिए पुष्टि करें कि यह आप हैं";
+"Lock with Face ID" = "Face ID से लॉक करें";
+"Lock with Touch ID" = "Touch ID से लॉक करें";
+"Lock with Optic ID" = "Optic ID से लॉक करें";
+"Lock with passcode" = "पासकोड से लॉक करें";
+"Unlock with Face ID" = "Face ID से अनलॉक करें";
+"Unlock with Touch ID" = "Touch ID से अनलॉक करें";
+"Unlock with Optic ID" = "Optic ID से अनलॉक करें";
+"Unlock" = "अनलॉक करें";
+
+// Пейвол
+"Debtors list Premium" = "Debtors list Premium";
+"One payment. No subscription. Yours forever." = "एक भुगतान। कोई सदस्यता नहीं। हमेशा के लिए आपका।";
+"No ads" = "कोई विज्ञापन नहीं";
+"The banner and ad breaks disappear for good." = "बैनर और विज्ञापन हमेशा के लिए हट जाते हैं।";
+"Weekly reminders" = "साप्ताहिक रिमाइंडर";
+"Choose a day and time and get your totals in a notification." = "दिन और समय चुनें और कुल राशि सूचना में पाएँ।";
+"Lifetime access" = "आजीवन एक्सेस";
+"Pay once. All future Premium features are included." = "एक बार भुगतान करें। भविष्य की सभी Premium सुविधाएँ शामिल हैं।";
+"Support an indie developer" = "एक स्वतंत्र डेवलपर का समर्थन करें";
+"Your purchase keeps the app alive and updated." = "आपकी खरीद ऐप को चालू और अपडेट रखती है।";
+"What you get" = "आपको क्या मिलता है";
+"Free" = "मुफ़्त";
+"Unlimited debts" = "असीमित ऋण";
+"Totals in one currency" = "एक मुद्रा में कुल राशि";
+"Face ID lock" = "Face ID लॉक";
+"Included" = "शामिल";
+"Not included" = "शामिल नहीं";
+"Unlock for %@" = "%@ में अनलॉक करें";
+"One-time purchase. No subscription." = "एक बार की खरीद। कोई सदस्यता नहीं।";
+"Restore" = "बहाल करें";
+"Terms of Use" = "उपयोग की शर्तें";
+"Privacy Policy" = "गोपनीयता नीति";
+"Premium unlocked" = "Premium अनलॉक हो गया";
+"Your purchase is waiting for approval. Premium will turn on automatically." = "आपकी खरीद स्वीकृति की प्रतीक्षा में है। Premium अपने आप चालू हो जाएगा।";
+"The purchase couldn't be verified. Please try again." = "खरीद सत्यापित नहीं हो सकी। कृपया फिर से कोशिश करें।";
+"No previous purchase was found for this Apple Account." = "इस Apple Account के लिए कोई पिछली खरीद नहीं मिली।";

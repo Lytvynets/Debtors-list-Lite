@@ -1,40 +1,170 @@
-/* 
+/*
   Localizable.strings
   Debtors-list
 
   Created by Vlad Lytvynets on 19.12.2024.
-  
+  v3: оновлено під новий інтерфейс SwiftUI (ключі — англійські фрази з коду).
 */
 
-//Main screen
-"Given" = "Дано";
-"Taken" = "Взято";
-"Show only given" = "Показати тільки дано";
-"Show only taken" = "Показати тільки взято";
-"Show all" = "Показати всі";
-"Filter" = "Фільтр";
 
-//Add new debt
-"Name" = "Ім'я";
-"Second name" = "Прізвище";
-"Sum" = "Сума";
-"Currency" = "Валюта";
-"Add debt" = "Додати борг";
+// Загальне
+"Cancel" = "Скасувати";
 "Save" = "Зберегти";
+"Done" = "Готово";
+"OK" = "OK";
+"Close" = "Закрити";
+"Continue" = "Далі";
+"Delete" = "Видалити";
+"Try again" = "Спробувати ще раз";
+"Something went wrong" = "Щось пішло не так";
+"Debtors list" = "Debtors list";
+"now" = "зараз";
+"Today" = "Сьогодні";
 
-//Settings
-"Notification" = "Сповіщення";
-"Round the result" = "Заокруглити результат";
-"Dark theme" = "Темна тема";
-"Privacy policy" = "Політика конфіденційності";
-"Other apps" = "Інші додатки";
-"Buy the premium version" = "Купити преміум версію";
-"Watch Ads to support the project" = "Дивитись рекламу щоб підтримати проект";
+// Сплеш і онбординг
+"Know who owes whom" = "Знайте, хто кому винен";
+"Skip" = "Пропустити";
+"Get started" = "Почати";
+"Every debt in one list" = "Усі борги в одному списку";
+"Add a debt in seconds and always know who owes you and whom you owe." = "Додавайте борг за кілька секунд і завжди знайте, хто винен вам і кому винні ви.";
+"Any currency, one total" = "Будь-яка валюта — один підсумок";
+"Lend in hryvnias, borrow in euros. Totals are converted to dollars at current rates." = "Позичайте в гривнях, беріть у борг в євро. Підсумки перераховуються в долари за поточним курсом.";
+"Private by default" = "Приватно за замовчуванням";
+"No sign-up. Your records stay on your device, and Face ID can lock the app." = "Без реєстрації. Записи зберігаються на вашому пристрої, а Face ID може заблокувати застосунок.";
+"A nudge every week" = "Нагадування щотижня";
+"Get a weekly summary of your debts so nothing slips your mind." = "Раз на тиждень отримуйте підсумок боргів, щоб нічого не забути.";
+"Total" = "Разом";
+"No sign-up" = "Без реєстрації";
+"Stored on your device" = "Зберігається на пристрої";
+"Weekly on %@ at %@" = "Щотижня, %@ о %@";
+"Premium feature" = "Функція Premium";
+
+// Головний екран
+"Debts" = "Борги";
+"Net balance" = "Баланс";
+"Owed to you" = "Вам винні";
+"You owe" = "Ви винні";
+"owes you" = "винні вам";
+"you owe" = "ви винні";
+"settled" = "погашено";
+"All" = "Усі";
+"Filter" = "Фільтр";
+"History" = "Історія";
+"Search by name" = "Пошук за іменем";
+"New debt" = "Новий борг";
+"No debts yet" = "Боргів поки немає";
+"Add who owes you and whom you owe. The totals will appear above." = "Додайте, хто винен вам і кому винні ви. Підсумки з’являться вгорі.";
+"Add a debt" = "Додати борг";
+"Nothing here yet" = "Тут поки порожньо";
+"No debts match this filter." = "Немає боргів для цього фільтра.";
+"Change amount" = "Змінити суму";
+"Delete this debt?" = "Видалити цей борг?";
+"%@ will be removed from the list." = "%@ буде видалено зі списку.";
+"Totals in US dollars. Rates updated %@." = "Підсумки в доларах США. Курси оновлено %@.";
+"Totals in US dollars at approximate rates." = "Підсумки в доларах США за орієнтовним курсом.";
+"Premium" = "Premium";
+"Go Premium" = "Отримати Premium";
+"No name" = "Без імені";
+
+// Додавання і редагування боргу
+"Amount" = "Сума";
+"Currency" = "Валюта";
+"Direction" = "Напрямок";
+"I lent" = "Дано в борг";
+"I borrowed" = "Взято в борг";
+"They owe you this amount." = "Цю суму винні вам.";
+"You owe them this amount." = "Цю суму винні ви.";
+"Who" = "Хто";
+"First name" = "Ім’я";
+"Last name (optional)" = "Прізвище (необов’язково)";
+"Operation" = "Дія";
+"Add" = "Додати";
+"Subtract" = "Відняти";
+"New balance" = "Новий баланс";
+"The balance will be zero or less. You can mark the debt as settled instead." = "Баланс стане нульовим або від’ємним. Натомість можна позначити борг як погашений.";
+"Mark as settled" = "Позначити як погашений";
+"Mark this debt as settled?" = "Позначити борг як погашений?";
+"The debt will be removed from the list." = "Борг буде видалено зі списку.";
+
+// Налаштування
 "Settings" = "Налаштування";
+"Reminders" = "Нагадування";
+"Weekly reminder" = "Щотижневе нагадування";
+"Off" = "Вимкнено";
+"Privacy & display" = "Приватність і вигляд";
+"Round totals" = "Округлювати підсумки";
+"Appearance" = "Оформлення";
+"System" = "Як у системі";
+"Light" = "Світле";
+"Dark" = "Темне";
+"Support" = "Підтримка";
+"Watch an ad to support the project" = "Переглянути рекламу, щоб підтримати проєкт";
+"Restore purchases" = "Відновити покупки";
+"Other apps" = "Інші застосунки";
+"Privacy policy" = "Політика конфіденційності";
+"Version %@ (%@)" = "Версія %@ (%@)";
+"Premium is active" = "Premium активовано";
+"Thank you for supporting Debtors list!" = "Дякуємо, що підтримуєте Debtors list!";
+"Get Premium" = "Отримати Premium";
+"No ads and weekly reminders. One-time purchase." = "Без реклами та з щотижневими нагадуваннями. Одна покупка.";
+"Thank you for your support!" = "Дякуємо за підтримку!";
+"The ad isn't ready yet. Please try again in a moment." = "Реклама ще не готова. Спробуйте за мить.";
+"Premium has been restored." = "Premium відновлено.";
+"Language" = "Мова";
+"Choose the app language in iPhone Settings." = "Мову застосунку можна змінити в Параметрах iPhone.";
+"Pro version" = "Pro-версія";
+"The advanced version of Debtors list" = "Розширена версія Debtors list";
+"Couldn't turn on the lock. Make sure a passcode is set in the iPhone settings." = "Не вдалося увімкнути блокування. Перевірте, що в параметрах iPhone встановлено код-пароль.";
 
-//Paywall
-"Premium version" = "Преміум версія";
-"Disables all ads" = "Відключає всю рекламу!";
-"Allows you to set up notifications about debts" = "Дозволяє налаштувати повідомлення про борги";
-"Premium version for" = "Преміум версія за";
-"Continue" = "Продовжити";
+// Нагадування
+"Once a week you'll get a notification with your current totals." = "Раз на тиждень ви отримаєте сповіщення з поточними підсумками.";
+"Day" = "День";
+"Time" = "Час";
+"Preview" = "Попередній перегляд";
+"Notifications are turned off" = "Сповіщення вимкнено";
+"Open Settings" = "Відкрити Параметри";
+"Allow notifications for Debtors list in the Settings app to get reminders." = "Дозвольте сповіщення для Debtors list у Параметрах, щоб отримувати нагадування.";
+"Your debts" = "Ваші борги";
+"Owed to you: %@\nYou owe: %@" = "Вам винні: %@\nВи винні: %@";
+
+// Блокування
+"Debtors list is locked" = "Debtors list заблоковано";
+"Your records are hidden until you unlock the app." = "Записи приховано, доки ви не розблокуєте застосунок.";
+"Unlock to see your debts" = "Розблокуйте, щоб побачити борги";
+"Confirm it's you to turn on the lock" = "Підтвердьте, що це ви, щоб увімкнути блокування";
+"Lock with Face ID" = "Блокувати через Face ID";
+"Lock with Touch ID" = "Блокувати через Touch ID";
+"Lock with Optic ID" = "Блокувати через Optic ID";
+"Lock with passcode" = "Блокувати кодом-паролем";
+"Unlock with Face ID" = "Розблокувати через Face ID";
+"Unlock with Touch ID" = "Розблокувати через Touch ID";
+"Unlock with Optic ID" = "Розблокувати через Optic ID";
+"Unlock" = "Розблокувати";
+
+// Пейвол
+"Debtors list Premium" = "Debtors list Premium";
+"One payment. No subscription. Yours forever." = "Один платіж. Без підписки. Назавжди ваше.";
+"No ads" = "Без реклами";
+"The banner and ad breaks disappear for good." = "Банер і рекламні паузи зникнуть назавжди.";
+"Weekly reminders" = "Щотижневі нагадування";
+"Choose a day and time and get your totals in a notification." = "Оберіть день і час — і підсумки прийдуть у сповіщенні.";
+"Lifetime access" = "Доступ назавжди";
+"Pay once. All future Premium features are included." = "Платите один раз. Усі майбутні функції Premium уже включено.";
+"Support an indie developer" = "Підтримка незалежного розробника";
+"Your purchase keeps the app alive and updated." = "Ваша покупка допомагає застосунку жити й оновлюватися.";
+"What you get" = "Що ви отримуєте";
+"Free" = "Безкоштовно";
+"Unlimited debts" = "Необмежена кількість боргів";
+"Totals in one currency" = "Підсумки в одній валюті";
+"Face ID lock" = "Блокування Face ID";
+"Included" = "Включено";
+"Not included" = "Не включено";
+"Unlock for %@" = "Відкрити за %@";
+"One-time purchase. No subscription." = "Разова покупка. Без підписки.";
+"Restore" = "Відновити";
+"Terms of Use" = "Умови використання";
+"Privacy Policy" = "Політика конфіденційності";
+"Premium unlocked" = "Premium відкрито";
+"Your purchase is waiting for approval. Premium will turn on automatically." = "Покупка очікує на схвалення. Premium увімкнеться автоматично.";
+"The purchase couldn't be verified. Please try again." = "Не вдалося підтвердити покупку. Спробуйте ще раз.";
+"No previous purchase was found for this Apple Account." = "Для цього Apple Account попередніх покупок не знайдено.";
